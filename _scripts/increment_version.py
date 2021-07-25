@@ -28,8 +28,8 @@ with open('version.yml', 'w') as f:
 # Transform version dict to string
 version = '.'.join([str(version[key]) for key in ['major', 'minor', 'micro']])
 
-# Write version string to molecular/_version.py
-with open('molecular/version.py', 'w') as f:
+# Write version string to pathetic/_version.py
+with open('pathetic/version.py', 'w') as f:
     f.write("__version__ = '{}'\n".format(version))
 
 # Return
