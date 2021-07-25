@@ -5,6 +5,7 @@ requirements.txt
 setup.py
 version.yml
 pathetic/core.py
+pathetic/version.py
 pathetic.egg-info/PKG-INFO
 pathetic.egg-info/SOURCES.txt
 pathetic.egg-info/dependency_links.txt
