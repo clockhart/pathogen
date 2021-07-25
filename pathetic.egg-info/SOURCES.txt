@@ -1,0 +1,13 @@
+LICENSE.md
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+version.yml
+pathetic/core.py
+pathetic.egg-info/PKG-INFO
+pathetic.egg-info/SOURCES.txt
+pathetic.egg-info/dependency_links.txt
+pathetic.egg-info/requires.txt
+pathetic.egg-info/top_level.txt
+pathetic.egg-info/zip-safe
