@@ -30,11 +30,12 @@ jobs:
 
     - name: Test
       run: |
-        cp -r pathetic/tests/samples ./samples
-        cp pathetic/tests/test.py .
+        # cp -r pathetic/tests/samples ./samples
+        # cp pathetic/tests/test.py .
         # python -m coverage run test.py
         # coverage run -m unittest test.py
-        rm test.py
+        # rm test.py
+        echo 0
 
     - name: Code coverage
       run: |
@@ -46,10 +47,11 @@ jobs:
 
     - name: Make documentation
       run: |
-        cd docs
-        rm -rf source/api/generated
-        rm -rf build
-        make html
+        # cd docs
+        # rm -rf source/api/generated
+        # rm -rf build
+        # make html
+        echo 0
 
     - name: Sync with github
       run: |
