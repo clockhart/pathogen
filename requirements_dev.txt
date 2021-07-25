@@ -1,0 +1,5 @@
+codecov
+coverage
+pyyaml
+sphinx
+sphinx-copybutton
