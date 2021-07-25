@@ -35,14 +35,14 @@ with open('README.rst', 'r') as buffer:
 
 # Create configuration
 def configuration(parent_package='', top_path=None):
-    config = Configuration('pathetic', parent_package, top_path)
+    config = Configuration('pathogen', parent_package, top_path)
     # config.add_data_dir(('_include', 'pathetic/_include'))  # not sure why this wasn't working with manifest.in
     return config
 
 
 # Then, install molecular
 setup(
-    # name='molecular',
+    # name='pathogen',
     version=version,
     author='C. Lockhart',
     author_email='chris@lockhartlab.org',
@@ -50,7 +50,7 @@ setup(
     long_description=long_description,
     url="https://www.lockhartlab.org",
     packages=[
-        'pathetic',
+        'pathogen',
     ],
     install_requires=requirements,
     # include_package_data=True,

@@ -30,8 +30,8 @@ jobs:
 
     - name: Test
       run: |
-        # cp -r pathetic/tests/samples ./samples
-        # cp pathetic/tests/test.py .
+        # cp -r pathogen/tests/samples ./samples
+        # cp pathogen/tests/test.py .
         # python -m coverage run test.py
         # coverage run -m unittest test.py
         # rm test.py
