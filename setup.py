@@ -36,7 +36,7 @@ with open('README.rst', 'r') as buffer:
 # Create configuration
 def configuration(parent_package='', top_path=None):
     config = Configuration('pathetic', parent_package, top_path)
-    # config.add_data_dir(('_include', 'molecular/_include'))  # not sure why this wasn't working with manifest.in
+    # config.add_data_dir(('_include', 'pathetic/_include'))  # not sure why this wasn't working with manifest.in
     return config
 
 

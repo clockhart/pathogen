@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: pathetic
-Version: 0.0.0
+Version: 0.0.dev1
 Summary: Helper functions for paths
 Home-page: https://www.lockhartlab.org
 Author: C. Lockhart
