@@ -51,7 +51,6 @@ setup(
     url="https://www.lockhartlab.org",
     packages=[
         'pathetic',
-        'pathetic.core',
     ],
     install_requires=requirements,
     # include_package_data=True,
