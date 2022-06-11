@@ -52,8 +52,6 @@ def vglob(path, errors='raise', **kwargs):
 
     # Variables to iterate
     keys = kwargs.keys()
-    if 'path' in keys:
-        raise AttributeError('`path` is protected and cannot be listed as a variable')
     if errors.lower() in 'raise':
         for key in keys:
             if key not in path:
