@@ -32,8 +32,18 @@ class Path:
 
 # Variable glob
 def vglob(path, errors='raise', **kwargs):
-    """"
+    """
     Variable glob.
+
+    Parameters
+    ----------
+    path : str
+    errors : str
+        How to handle errors? Currently only 'raise' is supported.
+
+    Returns
+    -------
+    list
     """
 
     # Where any kwargs supplied? If not, short-circuit and glob
@@ -42,6 +52,8 @@ def vglob(path, errors='raise', **kwargs):
 
     # Variables to iterate
     keys = kwargs.keys()
+    if 'path' in keys:
+        raise AttributeError('`path` is protected and cannot be listed as a variable')
     if errors.lower() in 'raise':
         for key in keys:
             if key not in path:
