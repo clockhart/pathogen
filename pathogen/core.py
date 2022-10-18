@@ -9,21 +9,21 @@ class Path:
     A way to hold a path (as a string) but retain metadata.
     """
 
-    __slots__ = ('_path', '_metadata')
+    __slots__ = ('_pathname', '_metadata')
 
-    def __init__(self, path, **metadata):
-        if isinstance(path, Path):
-            metadata = path._metadata
-            path = path._path
+    def __init__(self, pathname, **metadata):
+        if isinstance(pathname, Path):
+            metadata = pathname._metadata
+            pathname = pathname._pathname
 
-        self._path = path
+        self._pathname = pathname
         self._metadata = metadata
 
     def __repr__(self):
-        return self._path
+        return self._pathname
 
     def __fspath__(self):
-        return self._path
+        return self._pathname
 
     @property
     def metadata(self):
