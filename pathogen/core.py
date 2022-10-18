@@ -6,7 +6,7 @@ import os
 
 class Path:
     """
-    A way to hold a path (as string) but retain metadata.
+    A way to hold a path (as a string) but retain metadata.
     """
 
     __slots__ = ('_path', '_metadata')
@@ -31,13 +31,14 @@ class Path:
 
 
 # Variable glob
-def vglob(path, errors='raise', **kwargs):
+def vglob(pathname, errors='raise', **kwargs):
     """
     Variable glob.
 
     Parameters
     ----------
-    path : str
+    pathname : str
+        The variable `pathname` is used to match :ref:`glob`.
     errors : str
         How to handle errors? Currently only 'raise' is supported.
 
@@ -48,14 +49,14 @@ def vglob(path, errors='raise', **kwargs):
 
     # Where any kwargs supplied? If not, short-circuit and glob
     if len(kwargs) == 0:
-        return glob(path)
+        return glob(pathname)
 
     # Variables to iterate
     keys = kwargs.keys()
     if errors.lower() in 'raise':
         for key in keys:
-            if key not in path:
-                raise AttributeError('{' + f'{key}' + '}' + f' not in path="{path}"')
+            if key not in pathname:
+                raise AttributeError('{' + f'{key}' + '}' + f' not in pathname="{pathname}"')
 
     # Values
     def _convert_to_list(value):
@@ -70,7 +71,7 @@ def vglob(path, errors='raise', **kwargs):
     files = []
     for value_set in product(*values):
         fmt = {key: value_set[i] for i, key in enumerate(keys)}
-        fname = path.format(**fmt)
+        fname = pathname.format(**fmt)
         if errors.lower() in 'raise' and not os.path.exists(fname):
             raise FileNotFoundError(fname)
         files.append(Path(fname, **fmt))
