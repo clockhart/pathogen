@@ -1,12 +1,10 @@
 Metadata-Version: 2.1
 Name: pathogen
-Version: 0.0.dev7
+Version: 0.0.dev8
 Summary: Helper functions for paths
 Home-page: https://www.lockhartlab.org
 Author: C. Lockhart
 Author-email: chris@lockhartlab.org
-License: UNKNOWN
-Platform: UNKNOWN
 License-File: LICENSE.md
 
 
@@ -35,4 +33,3 @@ development
 release.
 
 we endeavor to follow https://scikit-learn.org/stable/developers/performance.html
-
